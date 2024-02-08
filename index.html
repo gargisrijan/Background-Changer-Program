@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+     #btncon{
+        margin-left: 800px;
+        margin-top: 20px;
+     }
+
+     .bg{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid black;
+        box-shadow: 2px 2px 5px palevioletred;
+        border-radius: 50%;
+        margin: 15px;
+        cursor: pointer;
+     }
+     #one{
+        background-color: whitesmoke;
+     }
+     #two{
+        background-color: tomato;
+     }
+     #three{
+        background-color: palevioletred;
+     }
+     #four{
+        background-color: purple;
+     }
+     #five{
+        background-color: seagreen;
+     }
+     #frm{
+        height:100px;
+        width: 500px;
+        border:2px solid black;
+        margin-left: 600px;
+        margin-top: 20px;
+        display: none;
+     }
+   </style>
+</head>
+<body>
+    <div id="btncon">
+         <span class="bg" id="one" onclick="bgc('#ffffff')"></span>
+         <span class="bg" id="two" onclick="bgc('#ff6347')"></span>
+         <span class="bg" id="three" onclick="bgc('#ffc0cb')"></span>
+         <span class="bg" id="four" onclick="bgc('#9370db')"></span>
+         <span class="bg" id="five" onclick="bgc('#2e8b57')"></span>
+    </div>
+    <table border="2px">
+        <tr>
+            <td><h1 id="hh"><center>Background Changer</center></h1></td>
+            
+        </tr>
+        <tr>
+            <td><p id="pp"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae quos quaerat quo. Fugit aliquam tempore non saepe at in aspernatur obcaecati minus cumque impedit, deleniti possimus rerum consequatur, facilis laboriosam temporibus atque magnam quisquam illum quo. Sequi alias aspernatur sed perspiciatis dolores iure officiis quam est optio ipsam cupiditate sapiente, ad corporis voluptatem temporibus. Nobis officia earum obcaecati minus aperiam perspiciatis blanditiis dolorem, aspernatur quo architecto quam fuga natus incidunt cum soluta, animi a. Assumenda voluptatibus soluta sed libero dolorem saepe inventore, aut, itaque exercitationem iusto dolorum voluptatum necessitatibus quas aperiam ipsa excepturi nemo a perferendis tempora similique tenetur vel!</p></td>
+        </tr>
+        
+    </table>
+    <div id="frm">
+    <form id="f1">
+        <input type="text" name="text" id="t1" placeholder="Enter your E-Mail">
+        <input type="submit" values="SignUp" id="btn1">
+    </form>
+    </div>
+       
+    <script>
+        function bgc(c)
+        {
+            let hh=document.getElementById('hh');
+            let pp=document.getElementById('pp');
+            document.body.style.background=c;
+            if(c!='#ffffff')
+            {
+                hh.style.color='white';
+                pp.style.color='white';
+            }
+            else
+            {
+                hh.style.color='black';
+                pp.style.color='black';
+            }
+        }
+        function sform()
+        {
+            let ff=document.getElementById('frm');
+            ff.style.display="block";
+        }
+        setTimeout(sform,5000);
+    </script>
+</body>
+</html>
